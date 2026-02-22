@@ -1,0 +1,32 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+  background-color: blanchedalmond;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+span {
+  color: darkslategray;
+  text-decoration: underline;
+}
+
+li {
+  background-color: lightblue;
+  width: 30%;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: darkcyan;
+    border: 2px solid darkslategray;
+    cursor: pointer;
+}
