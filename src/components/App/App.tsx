@@ -3,7 +3,7 @@ import { data } from "../../data/data"
 import { StudentList } from "./StudentList/StudentList"
 
 export const App = () => {
-    const [students, SetStudents] = useState(data)
+    const [students, setStudents] = useState(data)
 
     return (
     <>
