@@ -11,11 +11,11 @@ const handleClick = () => {
 export const StudentItem = ({ student } : Props) => {
     return (
         <>
-            <img src={student.avatar}></img>
+            <img src={student.avatar} alt="Avatar"></img>
             <p><span>Name:</span> {student.name}</p>
             <p><span>Age:</span> {student.age}</p>
             <p><span>Course:</span> {student.course}</p>
-            <p><span>Status:</span> {student.isOnline ? "Online \u{1F7E2}" : "Ofline \u{1F534}"}</p>
+            <p><span>Status:</span> {student.isOnline ? "Online \u{1F7E2}" : "Offline \u{1F534}"}</p>
             <button onClick={handleClick}>View Profile</button>
         </>
     )
