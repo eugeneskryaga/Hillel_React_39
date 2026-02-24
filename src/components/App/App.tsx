@@ -1,11 +1,5 @@
-import { useState } from "react"
-import { data } from "../../data/data"
-import { StudentList } from "../StudentList/StudentList"
+import { Students } from "../Students/Students"
 
 export const App = () => {
-    const [students, setStudents] = useState(data)
-
-    console.log(setStudents)
-
-    return <StudentList students={students}/>
+    return <Students />
 }

@@ -5,6 +5,7 @@ body {
 }
 
 ul {
+  margin: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -18,15 +19,41 @@ span {
 
 li {
   background-color: lightblue;
-  width: 30%;
+  width: 300px;
+  border: 2px solid darkcyan;
+  padding: 20px;
+}
+
+li :last-child {
+  margin-bottom: 0;
 }
 
 button {
-    display: block;
-    margin: 0 auto;
-    font-size: 20px;
-    border-radius: 8px;
-    background-color: darkcyan;
-    border: 2px solid darkslategray;
-    cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: darkcyan;
+  border: 2px solid darkslategray;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  padding: 20px;
+  border: 2px solid darkslategray;
+  background-color: lightblue;
+  width: 300px;
+}
+
+form :last-child {
+  margin-top: 20px;
+  width: 100px;
+}
+
+input {
+  width: 200px;
+  height: 20px;
 }
