@@ -4,7 +4,7 @@ import { StudentItem } from "../StudentItem/StudentItem";
 interface Props {
     students: Student[]
     onDelete: (id: number) => void
-    onStatusChange: (id: number, status: boolean) => void
+    onStatusChange: (id: number) => void
 }
 
 export const StudentList = ({students, onDelete, onStatusChange} : Props) => {

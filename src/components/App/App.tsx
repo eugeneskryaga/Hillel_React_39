@@ -1,5 +1,38 @@
-import { Students } from "../Students/Students"
+import { useState } from "react"
+
+import type { Student } from "../../types/types"
+
+import { data } from "../../data/data"
+import { StudentList } from "../StudentList/StudentList"
+import { Form } from "../Form/Form"
 
 export const App = () => {
-    return <Students />
+    const [students, setStudents] = useState(data)
+    
+        const deleteStudent = (id: number) => {
+            setStudents((prevStudents) => prevStudents.filter((student) => id != student.id) )
+        }
+    
+        const changeStudentStatus = (id: number) => {
+            setStudents(
+                students.map((student) => {
+                    if (student.id === id) {
+                        student.isOnline = !student.isOnline
+                        return {...student}
+                    }
+                    return student
+                })
+            )
+        }
+    
+        const addStudent = (newStudent: Student) => {
+            setStudents([...students, newStudent])
+        }
+    
+        return (
+            <>
+                <StudentList students={students} onDelete={deleteStudent} onStatusChange={changeStudentStatus}/>
+                <Form onAdd={addStudent}/>
+            </>
+        )
 }
